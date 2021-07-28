@@ -11,9 +11,11 @@ int main() {
 		int n;
 		string s;
 		cin >> n >> s;
+		// copy the original string and sort it in lexicographical order
 		string pattern = s;
 		sort(pattern.begin(), pattern.end());
 		int cnt = 0;
+		// check the characters that are not in their respective positions after sorting
 		for (int i = 0; i < n; i++) {
 			cnt += (s[i] != pattern[i]);
 		}
